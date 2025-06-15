@@ -1,1 +1,3 @@
-console.log(username);
+user.welcomeMessage()
+// user.username="sam"
+// user.welcomeMessage()
