@@ -7,8 +7,24 @@
 
 
 // let i =0;
-for (let i = 0 ; i<=5;i++){
-console.log(i);
-
-}
+// for (let i = 0 ; i<=5;i++){
+// for (let j = 0; j < 5; j++) {
+//   console.log(`The inner loop is ${j}`);
   
+// }
+// console.log(`the outer loop is ${i}`);
+
+// }
+  
+
+
+//break and continue
+for (let index = 1; index <= 30; index++) {
+  if (index == 5) {
+    console.log('Detected 5');
+    // break;
+    continue;
+  }
+ console.log(`Value of i is ${index}`);
+ 
+}
