@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nevil</title>
+</head>
+<body style="background-color: #212121;  color: #fff;">
+  
+  <ul class="language">
+    <li>JavaScript</li>
+  </ul>
+</body>
+<script>
+  function addLanguage(langname) {
+   const li =   document.createElement('li')
+   li.innerHTML = `${langname}`
+   document.querySelector('.language').appendChild(li)
+  }
+  addLanguage("python")
+  addLanguage("java")
+
+function addOptiLanguage(langName) {
+  const lis =   document.createElement('li');
+  lis.appendChild(document.createTextNode(langName))
+   document.querySelector('.language').appendChild(lis)
+}
+addOptiLanguage('golang')
+addOptiLanguage('ruby')
+
+
+//Edit
+const edit = document.querySelector("li:nth-child(2)")
+//edit.innerHTML="HTML"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>
