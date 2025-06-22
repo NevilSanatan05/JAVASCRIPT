@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Chai aur Code</h1>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    // setInterval(function () {
+    //   console.log('Hitesh');
+
+    // },2000)
+
+    // setTimeout(function () {
+    //   console.log('Hitesh');
+
+    // },2000)
+
+    const say = function () {
+      console.log("Raj");
+    };
+    setTimeout(say, 2000);
+
+    const changeText = function () {
+      document.querySelector("h1").innerHTML = "Best Js Series";
+    };
+   const changeMe =  setTimeout(changeText, 2000);
+
+    // clearTimeout(changeMe)
+    document.getElementById('stop').addEventListener('click',function(){
+      clearTimeout(changeMe)
+      console.log('STOPPED');
+      
+    })
+  </script>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Chai aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+   
+const say = function(){
+  console.log('Hello',Date.now());
+}
+
+let intervalId; // Store interval ID globally
+
+document.getElementById('start').addEventListener('click',function(){
+   if (!intervalId) {
+          intervalId = setInterval(say, 2000);
+        }
+})
+
+document.getElementById('stop').addEventListener('click',function(){
+  clearInterval(intervalId)
+  console.log('Stopped');
+  
+})
+
+  </script>
+</html>
