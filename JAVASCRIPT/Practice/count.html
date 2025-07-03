@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+   <style>
+    input[type="text"] {
+      padding: 10px;
+      width: 300px;
+      font-size: 16px;
+    }
+    #ten {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  
+  <input type="text" name="" id="te" placeholder="Start Typing " />
+  
+  <div id="ten">Total Characters : </div>
+</body>
+<script>
+  let counter = document.getElementById('te')
+  let count = document.getElementById('ten')
+   counter.addEventListener("input", () => {
+    count.textContent = `Total Characters: ${counter.value.length}`;
+  });
+</script>
+</html>

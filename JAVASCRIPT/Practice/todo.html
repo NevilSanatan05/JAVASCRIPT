@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Do List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      max-width: 500px;
+      margin: auto;
+      background-color: #f0f4f8;
+    }
+    h1 {
+      text-align: center;
+    }
+    #taskInput {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    #addTask {
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      background: #fff;
+      padding: 10px;
+      margin-top: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 4px;
+    }
+    .delete {
+      background: red;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📝 To-Do List</h1>
+  <input type="text" id="taskInput" placeholder="Enter a task..." />
+  <button id="addTask">Add Task</button>
+
+  <ul id="taskList"></ul>
+
+<script>
+  let task = document.getElementById("taskInput");
+  let add = document.getElementById("addTask");
+  let list = document.getElementById('taskList');
+
+  function todo() {
+    const taskText = task.value.trim();
+    if(taskText === "") return;
+
+    const li = document.createElement("li");
+    li.innerHTML=`${taskText} 
+    <button class="delete">Delete </button>
+    `;
+    list.appendChild(li);
+    task.value="";
+    li.querySelector(".delete").addEventListener("click",()=>{
+      li.remove()
+    })
+  }
+  add.addEventListener("click",todo)
+   
+</script>
+
+</body>
+</html>
