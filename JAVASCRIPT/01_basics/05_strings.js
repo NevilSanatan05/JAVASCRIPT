@@ -17,3 +17,5 @@ console.log(name.trim()); // Output: "hitesh"
 const url = "https://www.hiteshchoudhary%20choudhary";
 console.log(url.replace("%20", "-")); // Output: "https://www.hiteshchoudhary-choudhary"
 console.log(gameName.split(":")); // Output: [ 'hitesh', 'hc' ]
+console.log(gameName);
+
