@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bgc Changer</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+    #colour {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    #red{
+      background-color: red;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      margin-right: 2px;
+    }
+    #blue{
+      background-color: blue;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    #green{
+      background-color: green;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      margin-right: 2px;
+    }
+    #yellow{
+      background-color: yellow;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      margin-right: 2px;
+    }
+    #pink{
+      background-color: pink;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    #reset {
+      background-color: gray;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <button id="red" class="colour">Red</button>
+  <button id="blue" class="colour">Blue</button>
+  <button id="green" class="colour">Green</button>
+  <button id="yellow" class="colour">Yellow</button>
+  <button id="pink" class="colour">Pink</button>
+  <button id="reset">Reset Page</button>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>
