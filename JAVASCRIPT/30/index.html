@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Validation</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+    input { display: block; margin: 10px auto; padding: 8px; width: 200px; }
+    button { padding: 10px 20px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h2>Register Form</h2>
+  <form id="registerForm">
+    <input type="text" id="name" placeholder="Enter Name">
+    <input type="email" id="email" placeholder="Enter Email">
+    <input type="password" id="password" placeholder="Enter Password">
+    <button type="submit">Register</button>
+  </form>
+
+  <script>
+    const form = document.getElementById('registerForm');
+    const nameField = document.getElementById('name');
+    const emailField = document.getElementById('email');
+    const passwordField = document.getElementById('password');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault(); // Stop page reload
+
+      const name = nameField.value.trim();
+      const email = emailField.value.trim();
+      const password = passwordField.value.trim();
+
+      // Validation
+      if (!name || !email || !password) {
+        alert("All fields are required!");
+        return;
+      }
+
+      if (!email.includes('@') || !email.includes('.')) {
+        alert("Enter a valid email!");
+        return;
+      }
+
+      if (password.length < 6) {
+        alert("Password must be at least 6 characters!");
+        return;
+      }
+
+      alert(`Welcome, ${name}! Registration successful.`);
+      form.reset();
+    });
+  </script>
+</body>
+</html>
