@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Local Storage Demo</title>
+</head>
+<body>
+  <h2>Local Storage Demo</h2>
+
+  <input type="text" id="name" placeholder="Enter your name">
+  <button onclick="saveData()">Save</button>
+  <button onclick="getData()">Get</button>
+  <button onclick="clearData()">Clear</button>
+
+  <p id="output"></p>
+
+  <script>
+    function saveData() {
+      const username = document.getElementById('name').value; // get input value
+      const user = {
+        name: username || "Nevil", // if empty, use default "Nevil"
+        age: 18
+      };
+      localStorage.setItem("user", JSON.stringify(user));
+      alert("Data Saved");
+    }
+
+    function getData() {
+      const data = localStorage.getItem("user");
+      if (data) {
+        const user = JSON.parse(data);
+        document.getElementById("output").innerText = `Hello ${user.name}`;
+      } else {
+        document.getElementById("output").innerText = "No data found!";
+      }
+    }
+
+    function clearData() {
+      localStorage.removeItem("user");
+      document.getElementById("output").innerText = "Data cleared!";
+    }
+  </script>
+</body>
+</html>

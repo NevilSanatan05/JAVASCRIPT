@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countdown Timer</title>
+</head>
+<body>
+  <h1>Countdown Timer</h1>
+  <p id="timer">10</p>
+  <button onclick="startCountdown()">Start</button>
+  <button onclick="resetCountdown()">Reset</button>
+
+  <script>
+    let countdownValue = 10;       // Starting number
+    let intervalId = null;         // To store setInterval
+
+    function startCountdown() {
+      if (!intervalId) {  // Prevent multiple intervals
+        intervalId = setInterval(() => {
+          document.getElementById("timer").innerText = countdownValue;
+
+          if (countdownValue === 0) {
+            clearInterval(intervalId);  // Stop timer at 0
+            intervalId = null;
+            alert("⏰ Time's up!");
+          } else {
+            countdownValue--;
+          }
+        }, 1000);  // Runs every 1 second
+      }
+    }
+
+    function resetCountdown() {
+      clearInterval(intervalId);     // Stop timer
+      intervalId = null;
+      countdownValue = 10;           // Reset back to 10
+      document.getElementById("timer").innerText = countdownValue;
+    }
+  </script>
+</body>
+</html>
